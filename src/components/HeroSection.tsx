@@ -14,17 +14,17 @@ const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
       {/* Hero Carousel */}
-      <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+      <div className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] overflow-hidden bg-black">
         <Carousel className="w-full h-full">
           <CarouselContent>
             <CarouselItem>
-              <div className="relative w-full h-full">
+              <div className="relative w-full min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/2e61d5f9-dd1d-420f-9bff-f3509dec38a7.png" 
                   alt="Kenyan Prince - Elite Forex Trader" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white px-4">
                     <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
