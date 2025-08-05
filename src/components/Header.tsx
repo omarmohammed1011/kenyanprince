@@ -38,9 +38,6 @@ const Header = () => {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              Log In
-            </Button>
             <Button variant="elite" size="sm">
               Sign Up
             </Button>
@@ -70,9 +67,6 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="ghost" size="sm">
-                  Log In
-                </Button>
                 <Button variant="elite" size="sm">
                   Sign Up
                 </Button>

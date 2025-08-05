@@ -1,25 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { TrendingUp, ArrowRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const HeroSection = () => {
+  const handleInvestNow = () => {
+    window.open('https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ==', '_blank');
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/30 pt-16">
-      <div className="container mx-auto px-4 lg:px-8 text-center">
+    <section id="home" className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
+      {/* Hero Carousel */}
+      <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+        <Carousel className="w-full h-full">
+          <CarouselContent>
+            <CarouselItem>
+              <div className="relative w-full h-full">
+                <img 
+                  src="/lovable-uploads/2e61d5f9-dd1d-420f-9bff-f3509dec38a7.png" 
+                  alt="Kenyan Prince - Elite Forex Trader" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-4">
+                    <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
+                      <TrendingUp className="h-4 w-4 text-accent" />
+                      <span className="text-accent font-medium">Elite Forex Trader</span>
+                    </div>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                      Master Forex Trading
+                      <span className="block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                        Build Your Wealth
+                      </span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 lg:px-8 py-16 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Status Badge */}
-          <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
-            <TrendingUp className="h-4 w-4 text-primary" />
-            <span className="text-primary font-medium">Elite Forex Trader</span>
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Master Forex Trading
-            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Build Your Wealth
-            </span>
-          </h1>
-
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             Join Kenya's most trusted forex trading mentor. Turn market knowledge into consistent profits.
@@ -28,6 +56,7 @@ const HeroSection = () => {
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
+              onClick={handleInvestNow}
               variant="invest"
               size="xl"
               className="group min-w-[200px] shadow-2xl"
