@@ -24,7 +24,7 @@ const HeroSection = () => {
                   alt="Kenyan Prince - Elite Forex Trader" 
                   className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/5" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white px-4">
                     <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
