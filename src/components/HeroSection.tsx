@@ -36,6 +36,15 @@ const HeroSection = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
         <div className="text-center text-white max-w-4xl mx-auto">
 
+          {/* KP Forex Trading Logo */}
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/9700e5a6-2f4b-47a0-9edf-0c649f3ba761.png" 
+              alt="KP Forex Trading - The Ultimate of Trading" 
+              className="w-64 md:w-80 lg:w-96 mx-auto"
+            />
+          </div>
+
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Master the Markets
