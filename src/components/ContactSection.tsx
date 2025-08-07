@@ -1,40 +1,21 @@
-import { Mail, Phone, Instagram, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { contactData } from "@/data/siteData";
 
 const ContactSection = () => {
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      value: "trading@kenyanprince.com",
-      action: "mailto:trading@kenyanprince.com"
-    },
-    {
-      icon: Phone,
-      title: "WhatsApp",
-      value: "+254 799 695 165",
-      action: "https://wa.me/254799695165"
-    },
-    {
-      icon: Instagram,
-      title: "Instagram",
-      value: "@_kenyanprince",
-      action: "https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ=="
-    }
-  ];
 
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Start Your Trading Journey
+            {contactData.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your financial future? Get in touch and let's discuss your trading goals.
+            {contactData.subtitle}
           </p>
         </div>
 
@@ -43,22 +24,41 @@ const ContactSection = () => {
           <Card className="border-border">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-foreground">
-                Get Started Today
+                {contactData.form.title}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input placeholder="First Name" className="border-border" />
-                <Input placeholder="Last Name" className="border-border" />
+                {contactData.form.fields.slice(0, 2).map((field) => (
+                  <Input 
+                    key={field.name}
+                    placeholder={field.placeholder} 
+                    type={field.type}
+                    className="border-border" 
+                    required={field.required}
+                  />
+                ))}
               </div>
-              <Input placeholder="Email Address" type="email" className="border-border" />
-              <Input placeholder="Phone Number" type="tel" className="border-border" />
-              <Textarea 
-                placeholder="Tell us about your trading experience and goals..." 
-                className="min-h-[120px] border-border"
-              />
+              {contactData.form.fields.slice(2).map((field) => (
+                field.type === 'textarea' ? (
+                  <Textarea 
+                    key={field.name}
+                    placeholder={field.placeholder} 
+                    className="min-h-[120px] border-border"
+                    required={field.required}
+                  />
+                ) : (
+                  <Input 
+                    key={field.name}
+                    placeholder={field.placeholder} 
+                    type={field.type}
+                    className="border-border" 
+                    required={field.required}
+                  />
+                )
+              ))}
               <Button variant="elite" size="lg" className="w-full group">
-                Send Message
+                {contactData.form.submitText}
                 <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </CardContent>
@@ -76,7 +76,7 @@ const ContactSection = () => {
             </div>
 
             <div className="space-y-6">
-              {contactInfo.map((contact, index) => (
+              {contactData.contactInfo.map((contact, index) => (
                 <div key={index} className="flex items-center space-x-4 group cursor-pointer"
                      onClick={() => window.open(contact.action, '_blank')}>
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -95,13 +95,13 @@ const ContactSection = () => {
             {/* CTA Box */}
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-6 mt-8">
               <h4 className="text-xl font-bold text-foreground mb-3">
-                Ready to Invest?
+                {contactData.cta.title}
               </h4>
               <p className="text-muted-foreground mb-4">
-                Don't wait. Start building your wealth today with proven forex strategies.
+                {contactData.cta.subtitle}
               </p>
               <Button variant="gold" size="lg" className="w-full">
-                Invest Now - $650
+                {contactData.cta.buttonText}
               </Button>
             </div>
           </div>

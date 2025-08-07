@@ -1,45 +1,23 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { testimonialsData } from "@/data/siteData";
 
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: "David M.",
-      role: "Software Engineer",
-      content: "Kenyan Prince taught me discipline and risk management. My trading account grew 150% in 6 months.",
-      rating: 5,
-      profit: "+KES 120,000"
-    },
-    {
-      name: "Sarah K.",
-      role: "Business Owner",
-      content: "Clear strategies, excellent mentorship. Finally making consistent profits in forex trading.",
-      rating: 5,
-      profit: "+KES 85,000"
-    },
-    {
-      name: "James O.",
-      role: "Marketing Manager",
-      content: "Best investment I've made. The signals and mentorship are worth every shilling.",
-      rating: 5,
-      profit: "+KES 200,000"
-    }
-  ];
 
   return (
     <section id="testimonials" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Success Stories
+            {testimonialsData.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real results from real traders who transformed their financial future.
+            {testimonialsData.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+          {testimonialsData.testimonials.map((testimonial, index) => (
             <Card key={index} className="relative hover:shadow-lg transition-all duration-300 border-border">
               <CardContent className="p-6">
                 {/* Quote Icon */}
@@ -75,18 +53,17 @@ const TestimonialsSection = () => {
         {/* Bottom Stats */}
         <div className="text-center mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Happy Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-accent mb-2">KES 15M+</div>
-              <div className="text-muted-foreground">Total Profits Generated</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">4.9/5</div>
-              <div className="text-muted-foreground">Average Rating</div>
-            </div>
+            {testimonialsData.bottomStats.map((stat, index) => (
+              <div key={index}>
+                <div className={`text-3xl font-bold mb-2 ${
+                  stat.variant === 'primary' ? 'text-primary' : 
+                  stat.variant === 'accent' ? 'text-accent' : 'text-secondary'
+                }`}>
+                  {stat.value}
+                </div>
+                <div className="text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

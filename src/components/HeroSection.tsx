@@ -1,22 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { TrendingUp, ArrowRight, Instagram, MessageCircle, Calendar } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { heroData } from "@/data/siteData";
+import { Calendar } from "lucide-react";
 
 const HeroSection = () => {
-  const handleTelegram = () => {
-    window.open('https://t.me/kenyanprince', '_blank');
-  };
-
-  const handleInstagram = () => {
-    window.open('https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ==', '_blank');
-  };
-
-  const handleMentorship = () => {
-    window.open('https://wa.me/254799695165', '_blank');
+  const handleButtonClick = (href: string) => {
+    window.open(href, '_blank');
   };
 
   return (
@@ -24,8 +12,8 @@ const HeroSection = () => {
       {/* Full Screen Hero Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/817d710f-c9c5-46c2-aec6-bd347acf596e.png" 
-          alt="KP Forex Trading - The Ultimate of Trading" 
+          src={heroData.backgroundImage}
+          alt={heroData.backgroundAlt}
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay for better text visibility */}
@@ -38,36 +26,30 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Master the Markets
+            {heroData.title.primary}
             <span className="block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              with Expert Trading
+              {heroData.title.accent}
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join Kenya's most trusted forex trading mentor and transform your financial future.
+            {heroData.subtitle}
           </p>
 
           {/* CTA Buttons Overlay */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              onClick={handleInstagram}
-              className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
-              size="xl"
-            >
-              <Instagram className="mr-2 h-5 w-5" />
-              Follow Instagram
-            </Button>
-
-            <Button
-              onClick={handleMentorship}
-              className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
-              size="xl"
-            >
-              <Calendar className="mr-2 h-5 w-5" />
-              Join Now
-            </Button>
+            {heroData.ctaButtons.map((button, index) => (
+              <Button
+                key={index}
+                onClick={() => handleButtonClick(button.href!)}
+                className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
+                size="xl"
+              >
+                {button.icon && <button.icon className="mr-2 h-5 w-5" />}
+                {button.text}
+              </Button>
+            ))}
           </div>
 
         </div>
