@@ -35,11 +35,6 @@ const HeroSection = () => {
       {/* Centered Content Overlay */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
         <div className="text-center text-white max-w-4xl mx-auto">
-          {/* Brand Badge */}
-          <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm">
-            <TrendingUp className="h-5 w-5 text-accent" />
-            <span className="text-accent font-semibold text-lg">Kenyan Prince</span>
-          </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -56,16 +51,6 @@ const HeroSection = () => {
 
           {/* CTA Buttons Overlay */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              onClick={handleTelegram}
-              className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
-              size="xl"
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Join Telegram
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
             <Button
               onClick={handleInstagram}
               className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
