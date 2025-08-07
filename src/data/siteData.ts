@@ -32,7 +32,7 @@ export const heroData = {
     accent: "with Expert Trading"
   },
   subtitle: "Join Kenya's most trusted forex trading mentor and transform your financial future.",
-  backgroundImage: "/lovable-uploads_deleted/9700e5a6-2f4b-47a0-9edf-0c649f3ba761.png",
+  backgroundImage: "/public/uploads/9700e5a6-2f4b-47a0-9edf-0c649f3ba761.png",
   backgroundAlt: "KP Forex Trading - The Ultimate of Trading",
   ctaButtons: [
     {
