@@ -66,7 +66,7 @@ const HeroSection = () => {
               size="xl"
             >
               <Calendar className="mr-2 h-5 w-5" />
-              Book Mentorship
+              Join Now
             </Button>
           </div>
 
