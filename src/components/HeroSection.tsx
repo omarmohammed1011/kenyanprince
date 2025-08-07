@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { TrendingUp, ArrowRight } from "lucide-react";
+import { TrendingUp, ArrowRight, Instagram } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +8,10 @@ import {
 
 const HeroSection = () => {
   const handleInvestNow = () => {
+    window.open('https://wa.me/254799695165', '_blank');
+  };
+
+  const handleInstagram = () => {
     window.open('https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ==', '_blank');
   };
 
@@ -20,11 +24,11 @@ const HeroSection = () => {
             <CarouselItem>
               <div className="relative w-full min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/77a746c6-4227-4642-a663-8f545b66e699.png" 
+                  src="/lovable-uploads/2d524103-aa25-4767-9ad1-d480e5b9e1bd.png" 
                   alt="Kenyan Prince - Elite Forex Trader" 
                   className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-black/5" />
+                <div className="absolute inset-0 bg-black/50" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white px-4">
                     <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
@@ -66,12 +70,13 @@ const HeroSection = () => {
             </Button>
             
             <Button
-              onClick={() => window.open('https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ==', '_blank')}
+              onClick={handleInstagram}
               variant="outline"
               size="lg"
               className="min-w-[180px] border-primary/30 hover:border-primary"
             >
-              Follow Instagram
+              <Instagram className="mr-2 h-4 w-4" />
+              Instagram
             </Button>
           </div>
 
