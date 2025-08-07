@@ -27,17 +27,14 @@ const ServicesSection = () => {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              
               <CardContent className="text-center space-y-4">
                 <p className="text-muted-foreground">
                   {service.description}
                 </p>
-                
                 <div className="text-2xl font-bold text-primary">
                   {service.price}
                   <span className="text-sm text-muted-foreground font-normal">{service.period}</span>
                 </div>
-                
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center justify-center space-x-2">
@@ -46,17 +43,37 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  variant="elite" 
-                  size="lg" 
+                <Button
                   className="w-full mt-6 group-hover:scale-105 transition-transform"
                 >
-                  Get Started
+                  {service.title === 'Signals Subscription' ? 'Subscribe Now' : 'Join Now'}
                 </Button>
               </CardContent>
             </Card>
           ))}
+
+          {/* Recommended Broker Card */}
+          <Card className="relative group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/30">
+            <CardHeader className="text-center pb-4">
+              <div className="mx-auto mb-4 p-3 bg-accent/10 rounded-full w-fit group-hover:bg-accent/20 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2" /></svg>
+              </div>
+              <CardTitle className="text-xl font-bold text-foreground">
+                Recommended Broker
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center space-y-4">
+              <p className="text-muted-foreground">
+                Trade using a trusted platform for Kenyan Prince students.
+              </p>
+              <Button
+                className="w-full mt-6 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-bold hover:from-yellow-500 hover:to-yellow-700 transition-transform group-hover:scale-105"
+                onClick={() => window.open('https://direct-fxpro.com/en/partner/sSPJZLCi', '_blank')}
+              >
+                Start with FXPro
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Bottom CTA */}
@@ -68,7 +85,7 @@ const ServicesSection = () => {
             <p className="text-muted-foreground mb-6">
               {servicesData.bottomCta.subtitle}
             </p>
-            <Button variant="gold" size="lg">
+            <Button>
               {servicesData.bottomCta.buttonText}
             </Button>
           </div>

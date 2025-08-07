@@ -32,7 +32,7 @@ export const heroData = {
     accent: "with Expert Trading"
   },
   subtitle: "Join Kenya's most trusted forex trading mentor and transform your financial future.",
-  backgroundImage: "/lovable-uploads/817d710f-c9c5-46c2-aec6-bd347acf596e.png",
+  backgroundImage: "/lovable-uploads_deleted/9700e5a6-2f4b-47a0-9edf-0c649f3ba761.png",
   backgroundAlt: "KP Forex Trading - The Ultimate of Trading",
   ctaButtons: [
     {
@@ -79,16 +79,18 @@ export const aboutData = {
   ],
   cta: {
     title: "Ready to Transform Your Trading?",
-    subtitle: "Follow my journey and get exclusive trading insights on Instagram.",
+    subtitle: "Follow my journey and get exclusive trading insights on Instagram and Telegram.",
     buttons: [
-      {
-        text: "Start Trading Now",
-        variant: "elite"
-      },
       {
         text: "Follow on Instagram",
         icon: Instagram,
         href: siteConfig.instagram.url,
+        variant: "outline"
+      },
+      {
+        text: "Join Telegram",
+        icon: TrendingUp,
+        href: "https://t.me/kp_forex254",
         variant: "outline"
       }
     ]
@@ -101,36 +103,28 @@ export const servicesData = {
   subtitle: "Comprehensive trading education and mentorship designed for serious traders.",
   services: [
     {
-      icon: TrendingUp,
-      title: "1-on-1 Mentorship",
-      description: "Personal guidance from market analysis to execution strategies.",
-      price: "$650",
+      icon: Users,
+      title: "Physical Mentorship",
+      description: "In-person 1-on-1 training with Kenyan Prince in a structured classroom setting.",
+      price: "$400",
       period: "/month",
-      features: ["Weekly Sessions", "Live Trading", "Strategy Development"]
+      features: ["Classroom Sessions", "Personal Guidance", "Live Trading"]
     },
     {
       icon: Shield,
-      title: "Risk Management", 
-      description: "Master the art of protecting your capital while maximizing profits.",
-      price: "$390",
+      title: "Online Mentorship",
+      description: "Live virtual mentorship sessions tailored to your skill level.",
+      price: "$200",
       period: "/month",
-      features: ["Position Sizing", "Stop Loss Strategy", "Portfolio Protection"]
+      features: ["Live Zoom Calls", "Q&A Sessions", "Strategy Development"]
     },
     {
       icon: Target,
-      title: "Trading Signals",
-      description: "Premium forex signals with detailed entry and exit points.",
-      price: "$210", 
+      title: "Signals Subscription",
+      description: "Access premium trading signals across major FX pairs and commodities.",
+      price: "$100",
       period: "/month",
       features: ["Daily Signals", "Market Analysis", "24/7 Support"]
-    },
-    {
-      icon: Users,
-      title: "VIP Community",
-      description: "Exclusive access to elite trader community and resources.",
-      price: "$910",
-      period: "/month", 
-      features: ["Private Group", "Market Updates", "Elite Network"]
     }
   ],
   bottomCta: {

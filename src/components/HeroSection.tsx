@@ -16,8 +16,8 @@ const HeroSection = () => {
           alt={heroData.backgroundAlt}
           className="w-full h-full object-cover object-center"
         />
-        {/* Dark overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* 50% black overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Centered Content Overlay */}
