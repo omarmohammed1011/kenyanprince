@@ -15,8 +15,8 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "WhatsApp",
-      value: "+254 700 000 000",
-      action: "https://wa.me/254700000000"
+      value: "+254 799 695 165",
+      action: "https://wa.me/254799695165"
     },
     {
       icon: Instagram,
@@ -101,7 +101,7 @@ const ContactSection = () => {
                 Don't wait. Start building your wealth today with proven forex strategies.
               </p>
               <Button variant="gold" size="lg" className="w-full">
-                Invest Now - KES 25,000
+                Invest Now - $650
               </Button>
             </div>
           </div>

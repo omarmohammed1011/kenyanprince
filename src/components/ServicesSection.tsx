@@ -8,28 +8,28 @@ const ServicesSection = () => {
       icon: TrendingUp,
       title: "1-on-1 Mentorship",
       description: "Personal guidance from market analysis to execution strategies.",
-      price: "KES 25,000",
+      price: "$650",
       features: ["Weekly Sessions", "Live Trading", "Strategy Development"]
     },
     {
       icon: Shield,
       title: "Risk Management",
       description: "Master the art of protecting your capital while maximizing profits.",
-      price: "KES 15,000",
+      price: "$390",
       features: ["Position Sizing", "Stop Loss Strategy", "Portfolio Protection"]
     },
     {
       icon: Target,
       title: "Trading Signals",
       description: "Premium forex signals with detailed entry and exit points.",
-      price: "KES 8,000",
+      price: "$210",
       features: ["Daily Signals", "Market Analysis", "24/7 Support"]
     },
     {
       icon: Users,
       title: "VIP Community",
       description: "Exclusive access to elite trader community and resources.",
-      price: "KES 35,000",
+      price: "$910",
       features: ["Private Group", "Market Updates", "Elite Network"]
     }
   ];

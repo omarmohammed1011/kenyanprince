@@ -20,7 +20,7 @@ const HeroSection = () => {
             <CarouselItem>
               <div className="relative w-full min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/2e61d5f9-dd1d-420f-9bff-f3509dec38a7.png" 
+                  src="/lovable-uploads/77a746c6-4227-4642-a663-8f545b66e699.png" 
                   alt="Kenyan Prince - Elite Forex Trader" 
                   className="w-full h-full object-contain"
                 />
@@ -29,7 +29,7 @@ const HeroSection = () => {
                   <div className="text-center text-white px-4">
                     <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
                       <TrendingUp className="h-4 w-4 text-accent" />
-                      <span className="text-accent font-medium">Elite Forex Trader</span>
+                      <span className="text-accent font-medium">Kenyan Prince</span>
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                       Master Forex Trading
@@ -66,11 +66,12 @@ const HeroSection = () => {
             </Button>
             
             <Button
+              onClick={() => window.open('https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ==', '_blank')}
               variant="outline"
               size="lg"
               className="min-w-[180px] border-primary/30 hover:border-primary"
             >
-              Learn More
+              Follow Instagram
             </Button>
           </div>
 
@@ -85,7 +86,7 @@ const HeroSection = () => {
               <div className="text-muted-foreground">Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">KES 2M+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$50K+</div>
               <div className="text-muted-foreground">Portfolio Value</div>
             </div>
           </div>
