@@ -24,8 +24,8 @@ const HeroSection = () => {
       {/* Full Screen Hero Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/2d524103-aa25-4767-9ad1-d480e5b9e1bd.png" 
-          alt="Kenyan Prince - Elite Forex Trader" 
+          src="/lovable-uploads/817d710f-c9c5-46c2-aec6-bd347acf596e.png" 
+          alt="KP Forex Trading - The Ultimate of Trading" 
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay for better text visibility */}
