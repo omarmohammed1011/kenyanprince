@@ -44,7 +44,6 @@ const HeroSection = () => {
                 key={index}
                 onClick={() => handleButtonClick(button.href!)}
                 className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
-                size="xl"
               >
                 {button.icon && <button.icon className="mr-2 h-5 w-5" />}
                 {button.text}
