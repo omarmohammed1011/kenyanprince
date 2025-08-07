@@ -87,24 +87,6 @@ const HeroSection = () => {
 
         </div>
       </div>
-
-      {/* Quick Stats - Positioned at bottom */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex flex-col sm:flex-row gap-8 text-center">
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-1">500+</div>
-            <div className="text-white/80 text-sm">Successful Traders</div>
-          </div>
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-1">85%</div>
-            <div className="text-white/80 text-sm">Success Rate</div>
-          </div>
-          <div className="bg-black/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-1">$50K+</div>
-            <div className="text-white/80 text-sm">Portfolio Value</div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

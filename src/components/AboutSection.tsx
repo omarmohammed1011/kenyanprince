@@ -32,6 +32,22 @@ const AboutSection = () => {
             ))}
           </div>
 
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-muted-foreground">Successful Traders</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">85%</div>
+              <div className="text-muted-foreground">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$5M</div>
+              <div className="text-muted-foreground">Portfolio Value</div>
+            </div>
+          </div>
+
           {/* CTA Section */}
           <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-foreground mb-4">
