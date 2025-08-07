@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { TrendingUp, ArrowRight, Instagram } from "lucide-react";
+import { TrendingUp, ArrowRight, Instagram, MessageCircle, Calendar } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -7,93 +7,101 @@ import {
 } from "@/components/ui/carousel";
 
 const HeroSection = () => {
-  const handleInvestNow = () => {
-    window.open('https://wa.me/254799695165', '_blank');
+  const handleTelegram = () => {
+    window.open('https://t.me/kenyanprince', '_blank');
   };
 
   const handleInstagram = () => {
     window.open('https://www.instagram.com/_kenyanprince?igsh=MWk3OWFzN3hiNWZ1cQ==', '_blank');
   };
 
+  const handleMentorship = () => {
+    window.open('https://wa.me/254799695165', '_blank');
+  };
+
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
-      {/* Hero Carousel */}
-      <div className="relative min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] overflow-hidden bg-black">
-        <Carousel className="w-full h-full">
-          <CarouselContent>
-            <CarouselItem>
-              <div className="relative w-full min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/2d524103-aa25-4767-9ad1-d480e5b9e1bd.png" 
-                  alt="Kenyan Prince - Elite Forex Trader" 
-                  className="w-full h-full object-contain"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-4">
-                    <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
-                      <TrendingUp className="h-4 w-4 text-accent" />
-                      <span className="text-accent font-medium">Kenyan Prince</span>
-                    </div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                      Master Forex Trading
-                      <span className="block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                        Build Your Wealth
-                      </span>
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
+    <section id="home" className="relative min-h-screen overflow-hidden">
+      {/* Full Screen Hero Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/lovable-uploads/2d524103-aa25-4767-9ad1-d480e5b9e1bd.png" 
+          alt="Kenyan Prince - Elite Forex Trader" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Dark overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 lg:px-8 py-16 text-center">
-        <div className="max-w-4xl mx-auto">
+      {/* Centered Content Overlay */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
+        <div className="text-center text-white max-w-4xl mx-auto">
+          {/* Brand Badge */}
+          <div className="inline-flex items-center space-x-2 bg-primary/20 border border-primary/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm">
+            <TrendingUp className="h-5 w-5 text-accent" />
+            <span className="text-accent font-semibold text-lg">Kenyan Prince</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            Master the Markets
+            <span className="block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+              with Expert Trading
+            </span>
+          </h1>
+
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join Kenya's most trusted forex trading mentor. Turn market knowledge into consistent profits.
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Join Kenya's most trusted forex trading mentor and transform your financial future.
           </p>
 
-          {/* Primary CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          {/* CTA Buttons Overlay */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={handleInvestNow}
-              variant="invest"
+              onClick={handleTelegram}
+              className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
               size="xl"
-              className="group min-w-[200px] shadow-2xl"
             >
-              Invest Now
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Join Telegram
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button
               onClick={handleInstagram}
-              variant="outline"
-              size="lg"
-              className="min-w-[180px] border-primary/30 hover:border-primary"
+              className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
+              size="xl"
             >
-              <Instagram className="mr-2 h-4 w-4" />
-              Instagram
+              <Instagram className="mr-2 h-5 w-5" />
+              Follow Instagram
+            </Button>
+
+            <Button
+              onClick={handleMentorship}
+              className="group min-w-[200px] bg-[#FFD700] text-black hover:bg-[#FFD700]/90 shadow-2xl text-lg py-6 px-8 font-semibold"
+              size="xl"
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+              Book Mentorship
             </Button>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Successful Traders</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">85%</div>
-              <div className="text-muted-foreground">Success Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$50K+</div>
-              <div className="text-muted-foreground">Portfolio Value</div>
-            </div>
+        </div>
+      </div>
+
+      {/* Quick Stats - Positioned at bottom */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="flex flex-col sm:flex-row gap-8 text-center">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
+            <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-1">500+</div>
+            <div className="text-white/80 text-sm">Successful Traders</div>
+          </div>
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
+            <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-1">85%</div>
+            <div className="text-white/80 text-sm">Success Rate</div>
+          </div>
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
+            <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-1">$50K+</div>
+            <div className="text-white/80 text-sm">Portfolio Value</div>
           </div>
         </div>
       </div>
