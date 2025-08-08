@@ -13,8 +13,9 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img 
           src={heroData.backgroundImage}
-          alt={heroData.backgroundAlt}
+          alt="Kenyan Prince Forex Trading - Professional trading mentor and educator specializing in currency markets"
           className="w-full h-full object-cover object-center"
+          loading="eager"
         />
         {/* 50% black overlay for better text visibility */}
         <div className="absolute inset-0 bg-black/50" />
@@ -24,7 +25,7 @@ const HeroSection = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
         <div className="text-center text-white max-w-4xl mx-auto">
 
-          {/* Main Headline */}
+          {/* Main Headline - H1 for SEO */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             {heroData.title.primary}
             <span className="block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">

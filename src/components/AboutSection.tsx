@@ -8,7 +8,7 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Section Header */}
+          {/* Section Header - H2 for SEO hierarchy */}
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             {aboutData.title}
           </h2>
