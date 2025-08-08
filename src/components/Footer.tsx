@@ -80,6 +80,17 @@ const Footer = () => {
           <p className="text-secondary-foreground/60 text-sm mt-2">
             {footerData.legal.disclaimer}
           </p>
+          <p className="text-secondary-foreground/40 text-xs mt-4">
+            Website made by{' '}
+            <a 
+              href="https://iqbalagency.netlify.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+            >
+              Iqbal Agency
+            </a>
+          </p>
         </div>
       </div>
     </footer>
